@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-st.set_page_config(page_title="Afazeres Domésticos", layout="wide")
+st.set_page_config(page_title="Afazeres Domésticos", page_icon="🧹", layout="wide")
 
 ARQUIVO_DATA = "Tabela 1.1.1.xls"
 
