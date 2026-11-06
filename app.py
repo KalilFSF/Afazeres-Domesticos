@@ -32,9 +32,6 @@ def carregar_data(caminho):
             "Homens_brancos", "Homens_negros_pardos", "Mulheres_brancas"
         ]
 
-        # A planilha possui 8 colunas: localidade, total geral,
-        # total branca, total preta/parda, homem branco, homem preto/pardo,
-        # mulher branca e mulher preta/parda.
         df = bruto.iloc[inicio[0]:, [0, 1, 2, 3, 4, 5, 6, 7]].copy()
         df = df.dropna(subset=[0])
         df = df[df[0].astype(str).str.strip() != ""]
@@ -126,8 +123,6 @@ try:
         st.markdown("---")
         st.subheader("📈 Gráficos comparativos")
 
-        # Gráfico de barras: compara as médias calculadas a partir dos grupos
-        # disponíveis exclusivamente na Tabela 1.1.1.
         col1, col2 = st.columns(2)
 
         with col1:
